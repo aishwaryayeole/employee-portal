@@ -1,0 +1,25 @@
+.loginContainer {
+  margin-top: 10rem;
+  background-color: darkorange;
+}
+
+.loginHeading {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 10rem;
+}
+
+.loginForm {
+  padding: 2rem 6rem 4rem 7rem;
+}
+
+.loginButton {
+  background-color: black;
+  color: white;
+}
+
+.loginError {
+  font-size: 12px;
+}

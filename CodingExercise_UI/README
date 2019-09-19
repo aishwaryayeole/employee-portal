@@ -1,0 +1,61 @@
+Thank you for taking the time to complete this coding assignment.
+We are excited to read your codes and discuss web development further 
+with you. 
+
+To complete the assignment, you need to build a React application 
+meeting the requirements described below. If details are missing, 
+please, make your own assumptions and document them. 
+
+The application is meant to run locally on http://localhost:3000
+but data will be fetched live from a backend at http://3.122.7.162:5000. 
+Due to Cross-Origin Resource Sharing (CORS) restrictions, it is
+best to start a local server instead of opening the html file
+that will start your application. You may run, for instance, one 
+of the following commands from the folder where the index.html
+file is located:
+python -m SimpleHTTPServer 3000
+or
+python3 -m http.server 3000
+You may also use a different setup.
+
+
+Step 1
+------
+Implement the screen Login_screen.png.  A click on the Login button 
+should trigger an http POST call to /v60/admin/session with the body 
+containing the parameters "username" with the value "admin" and 
+"credential" with the value "1111". The response will contain a
+JSESSIONID cookie that you should add to any request following a 
+successful login. Make sure, you implement the screen Login_error.png.
+
+Step 2
+------
+Assuming a successful login, implement the screen Search_screen.png. 
+You will test the interface using the keyword 'test'. A click on 
+the button Search will trigger an http GET call to 
+v60/admin/search/user?keyword=test&alias=false. Make sure the JSESSIONID
+cookie is passed on. The parameter xhrFields / withCredentials might
+be useful. In case, your browser does not transfer cookies properly
+don't hesitate to pass the JSESSIONID cookie manually. 
+
+Step 3
+------
+The Search call from Step 2 will fetch you an array of user objects 
+that you will use to implement the screen Search_results.png.  
+Objects with attribute user.ParentalRatingId below 50 should appear 
+in red. 
+
+Bonus Questions (optional)
+-----------------
+
+1.
+Add a local pagination to the interface showing results so that 
+five users are shown at a time.
+
+2.
+Implement some kind of automatic testing for this application.
+
+3. 
+Make sure 'alias' is not hard-coded and comes from some configuration 
+settings. 
+
